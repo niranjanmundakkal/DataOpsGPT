@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from sqlalchemy import text
 
+from app.api.v1.endpoints.pipelines import router as pipeline_router
 from app.db.base import Base
 from app.db.session import engine
 import app.models  # Register all SQLAlchemy models with Base.metadata.
@@ -12,6 +13,8 @@ app = FastAPI(
 )
 
 Base.metadata.create_all(bind=engine)
+
+app.include_router(pipeline_router, prefix="/api/v1")
 
 
 @app.get("/")
