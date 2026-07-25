@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 from sqlalchemy import text
 
-from app.database.database import Base, engine
-from app.models.pipeline import Pipeline
+from app.db.base import Base
+from app.db.session import engine
+import app.models  # Register all SQLAlchemy models with Base.metadata.
 
 app = FastAPI(
     title="DataOpsGPT API",
