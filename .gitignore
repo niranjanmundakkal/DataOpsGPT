@@ -1,8 +1,37 @@
+# Python virtual environments
+.ven/
+.venv/
+.venv-1/
 venv/
-__pycache__/
-*.pyc
+env/
+
+# Environment variables
 .env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Node
 node_modules/
-.idea/
+frontend/node_modules/
+
+# Build
+build/
+dist/
+
+# IDE
 .vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
 *.log

@@ -11,7 +11,7 @@ if str(BACKEND_DIR) not in sys.path:
 
 from app.core.config import settings
 from app.db.base import Base
-from app.models import Pipeline, PipelineRun
+from app.models import Pipeline, PipelineRun, PipelineEvent
 
 config = context.config
 
